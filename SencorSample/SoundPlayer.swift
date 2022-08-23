@@ -9,16 +9,22 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class SoundPlayer{
-    private let sound = try! AVAudioPlayer(data: NSDataAsset(name: "garagara")!.data)
-    
+class SoundPlayer:NSObject,ObservableObject,AVAudioPlayerDelegate{
+//    private let sound = try! AVAudioPlayer(data: NSDataAsset(name: "garagara")!.data)
+    private var sound:AVAudioPlayer?
     func playSound(){
-        sound.currentTime = 0.0
-        sound.numberOfLoops = -1
-        sound.play()
+        guard let url = Bundle.main.url(forResource: "garagara", withExtension: "mp3")else{ return }
+        sound = try! AVAudioPlayer(contentsOf: url)
+        sound?.currentTime = 0.0
+        sound?.numberOfLoops = -1
+        sound?.play()
     }
     
     func stopSound(){
-        sound.stop()
+        sound?.stop()
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
     }
 }

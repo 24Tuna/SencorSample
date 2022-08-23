@@ -12,6 +12,7 @@
 		7F6F2760288E7F93003A9D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F275F288E7F93003A9D94 /* Assets.xcassets */; };
 		7F6F2763288E7F93003A9D94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F2762288E7F93003A9D94 /* Preview Assets.xcassets */; };
 		7F6F276A288E80BA003A9D94 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F2769288E80BA003A9D94 /* MotionManager.swift */; };
+		7F9F1F9D28B470850052029A /* garagara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F9F1F9C28B470850052029A /* garagara.mp3 */; };
 		7FDC0B7628A633DF00A5B60F /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC0B7528A633DF00A5B60F /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		7F6F275F288E7F93003A9D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F6F2762288E7F93003A9D94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F6F2769288E80BA003A9D94 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		7F9F1F9C28B470850052029A /* garagara.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = garagara.mp3; sourceTree = "<group>"; };
 		7FDC0B7528A633DF00A5B60F /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +41,7 @@
 		7F6F274F288E7F8F003A9D94 = {
 			isa = PBXGroup;
 			children = (
+				7F9F1F9C28B470850052029A /* garagara.mp3 */,
 				7F6F275A288E7F8F003A9D94 /* SencorSample */,
 				7F6F2759288E7F8F003A9D94 /* Products */,
 			);
@@ -133,6 +136,7 @@
 			files = (
 				7F6F2763288E7F93003A9D94 /* Preview Assets.xcassets in Resources */,
 				7F6F2760288E7F93003A9D94 /* Assets.xcassets in Resources */,
+				7F9F1F9D28B470850052029A /* garagara.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

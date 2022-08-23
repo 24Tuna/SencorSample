@@ -28,8 +28,10 @@ final class MotionManager:NSObject,ObservableObject{
     override init(){
         super.init()
         
+        
+        
         if manager.isAccelerometerAvailable{
-        manager.accelerometerUpdateInterval = 20.0/60.0
+        manager.accelerometerUpdateInterval = 50.0/60.0
         manager.startAccelerometerUpdates(
             to: OperationQueue.current!,
             withHandler:{
@@ -38,14 +40,26 @@ final class MotionManager:NSObject,ObservableObject{
                 self.accelY = floor((accelData?.acceleration.y ?? 0.0) * 100000) / 100000
                 self.accelZ = floor((accelData?.acceleration.z ?? 0.0) * 100000) / 100000
                 
-                if fabs(fabs(self.accelX) - fabs(self.saveAccelX)) >= 0.05 ||
+                if fabs(fabs(self.accelX) - fabs(self.saveAccelX)) >= 0.05 &&
                     fabs(fabs(self.accelY) - fabs(self.saveAccelY)) >= 0.05{
                     if !self.decision{
+                        print("PlaySound:1")
                         self.player.playSound()
+                        self.decision = true
+                    }else{
+                        self.decision = false
+                    }
+                }else if fabs(fabs(self.saveAccelX) - fabs(self.accelX)) >= 0.05 &&
+                         fabs(fabs(self.saveAccelY) - fabs(self.accelY)) >= 0.05{
+                    if !self.decision{
+                        print("PlaySound:2")
+                        self.player.playSound()
+                        self.decision = true
                     }else{
                         self.decision = true
                     }
                 }else{
+                    print("StopSound")
                     self.decision = false
                     self.player.stopSound()
                 }
